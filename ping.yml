@@ -1,0 +1,10 @@
+---
+- hosts: dummyservers
+vars:
+  http_port: 80
+  max_clients: 10
+remote_user: root
+tasks:
+- name: live check
+  ping: 172.16.128.91
+  remote_user: ubuntu

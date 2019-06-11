@@ -2,8 +2,12 @@
   hosts: dummyservers
   tasks:
     - name: live check
-      ping: 172.16.128.91
+      net_ping:
+        dest: 172.16.168.107
+        count: 5
     - name: internet check
-      ping: google.com
+      net_ping:
+        dest: google.com
+        count: 5
       
 

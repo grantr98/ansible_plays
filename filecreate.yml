@@ -1,0 +1,19 @@
+- name: filecreate
+  hosts: all
+  tasks:
+    - name: write a file
+      copy:
+        dest: ~/awx.log
+        content:
+          #Hello World
+          #This has been a test of the emergency AWX broadcast system. If you are seeing this message your server is still alive and kicking.
+        owner: ubuntu
+    - name: append date and time to log
+      lineinfile:
+        dest: ~/awx.log
+        line: {{ansible_date_time.date}} T {{ansible_date_time.time}}
+        state: present
+        create: yes
+      
+    
+    

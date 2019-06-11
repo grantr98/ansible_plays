@@ -1,5 +1,5 @@
 - name: ping sample
-  hosts: dummyservers
+  hosts: all
   tasks:
     - name: live check
       net_ping:

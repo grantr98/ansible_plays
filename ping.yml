@@ -1,7 +1,7 @@
----
-- hosts: dummyservers
-tasks:
-  - name: live check
-    ping: 172.16.128.91
-    debug:
+- name: ping sample
+  hosts: dummyservers
+  tasks:
+    - name: live check
+      ping: 172.16.128.91
+      debug:
 

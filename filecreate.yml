@@ -4,7 +4,6 @@
     - name: write a file
       copy:
         dest: ~/awx.log
-        state: '{{file_state}}'
         content:
           Hello World
           This has been a test of the emergency AWX broadcast system. If you are seeing this message your server is still alive and kicking.

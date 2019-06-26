@@ -3,7 +3,8 @@
   tasks:
     - name: live check
       shell: ping 172.16.168.107 -c 3
+      
     - name: internet check
       shell: ping google.com -c 3
-      
+    - debug: var=out.stdout_lines
 

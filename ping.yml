@@ -2,12 +2,8 @@
   hosts: all
   tasks:
     - name: live check
-      net_ping:
-        dest: 172.16.168.107
-        count: 5
+      shell: ping 172.16.168.107 -c 3
     - name: internet check
-      net_ping:
-        dest: google.com
-        count: 5
+      shell: ping google.com -c 3
       
 
